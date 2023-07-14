@@ -35,7 +35,6 @@ MarkupSafe==2.1.3
 mysql==0.0.3
 mysql-connector==2.2.9
 mysqlclient==2.1.1
-numpy==1.24.3
 openpyxl==3.1.2
 packaging==23.1
 Pillow==9.5.0
@@ -47,7 +46,6 @@ pypng==0.20220715.0
 pytest==7.3.2
 python-dateutil==2.8.2
 pytz==2023.3
-PyYAML==6.0
 requests==2.31.0
 sqlparse==0.4.4
 svg.path==6.3
