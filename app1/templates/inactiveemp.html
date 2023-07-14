@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for emp in obj%}
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.department}}</td>
+            <td> 
+            <a href="{% url 'show_emp' emp.id %}" class="btn btn-primary">View</button>&nbsp;&nbsp;
+            <a href="{% url 'restore' emp.id %}" class="btn btn-success">Restore</button>&nbsp;&nbsp;
+            <a href="{% url 'hard_delete' emp.id %}" class="btn btn-danger">Hard Delete</Update>&nbsp;&nbsp;
+            </td>
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'create_inactive_csv'  %}" class="btn btn-primary">Create Csv </button>&nbsp;&nbsp;
+
+{% endblock %}
+create_inactive_excel

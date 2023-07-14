@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h5>ID &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:- &nbsp;&nbsp;&nbsp;<b>{{emp.id}}</b></h5>
+<h5>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-&nbsp;&nbsp;&nbsp<b>{{emp.name}}</b></h5>
+<h5>Joinning date  :-&nbsp;<b>&nbsp;&nbsp;&nbsp;{{emp.joining_date}}</b></h5>
+<h5>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    :- &nbsp;&nbsp;&nbsp;<b>{{emp.email_id}}</b></h5>
+<h5>Salary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  :- &nbsp;&nbsp;&nbsp;<b>{{emp.salary}}</b></h5>
+<h5>Department&nbsp;&nbsp; :-  <b>&nbsp;&nbsp;&nbsp;{{emp.department}}</b></h5>
+<h5>Job Status&nbsp;&nbsp;&nbsp&nbsp;&nbsp:- <b>&nbsp;&nbsp;&nbsp;{{emp.job_status}}</b></h5>
+<h5>Active &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;:- <b>&nbsp;&nbsp;&nbsp;{{emp.is_active}}</b></h5>
+
+{%endblock%}

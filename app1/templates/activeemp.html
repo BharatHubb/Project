@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Details</th>
+            <th>Created_by</th>
+            <th>Count = {{count}} </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for emp in obj%}
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.department}}</td>    
+                    <td>
+            <a href="{% url 'show_emp' emp.id %}" class="btn btn-primary">View</button>&nbsp;&nbsp;
+            <a href="{% url 'update_emp' emp.id %}" class="btn btn-success">Update</Update>&nbsp;&nbsp;
+            <a href="{% url 'soft_delete' emp.id %}" class="btn btn-info">Soft Delete</button>&nbsp;&nbsp;
+            <a href="{% url 'hard_delete' emp.id %}" class="btn btn-danger">Hard  Delete</button>&nbsp;&nbsp;
+            
+            <td>{{emp.created_by.username}}</td>    
+            <td></td>    
+
+            
+    
+            
+
+            </td>
+          
+
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+  <a href="{% url 'create_csv'  %}" class="btn btn-danger">Create Csv </button>&nbsp;&nbsp;
+
+
+
+
+{% endblock %}
+

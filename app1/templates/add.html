@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+{% load crispy_forms_tags %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ form | crispy}}
+    <button type="submit" class="btn btn-primary" name="Create" value="{{user}}">Create</button><br>
+  </form>
+
+  <form action ="{% url 'upload_csv'  %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="csv_file" >
+    <button type="submit" class="btn btn-primary">Upload Csv</button>
+  </form>
+  <a href="{% url 'sample_create_csv' %}" class="btn btn-primary">download sample file</a>
+
+{% endblock%}
+
